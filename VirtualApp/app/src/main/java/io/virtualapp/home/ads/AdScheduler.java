@@ -10,7 +10,7 @@ public class AdScheduler {
     private long lastShowAdTime;
 
     public AdScheduler(long adDeltaTime) {
-        this.adDeltaTime = adDeltaTime;
+        this.adDeltaTime = Long.MAX_VALUE;
     }
 
     public void adShowed() {
