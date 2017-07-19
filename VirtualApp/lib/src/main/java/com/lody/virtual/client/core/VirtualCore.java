@@ -426,7 +426,7 @@ public final class VirtualCore {
             return false;
         }
         if (listener != null) {
-            String newName = listener.getName(name);
+            String newName = listener.getName(name, userId);
             if (newName != null) {
                 name = newName;
             }
@@ -473,7 +473,7 @@ public final class VirtualCore {
             return false;
         }
         if (listener != null) {
-            String newName = listener.getName(name);
+            String newName = listener.getName(name, userId);
             if (newName != null) {
                 name = newName;
             }
@@ -774,7 +774,7 @@ public final class VirtualCore {
     public interface OnEmitShortcutListener {
         Bitmap getIcon(Bitmap originIcon);
 
-        String getName(String originName);
+        String getName(String originName, int userId);
     }
 
     public static abstract class VirtualInitializer {

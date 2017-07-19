@@ -224,8 +224,8 @@ class HomePresenterImpl implements HomeContract.HomePresenter {
             }
 
             @Override
-            public String getName(String originName) {
-                return originName + "(VA)";
+            public String getName(String originName, int userId) {
+                return originName + "(VA" + (userId == 0 ? "" : "-" + userId) +")";
             }
         };
         if (data instanceof PackageAppData) {
